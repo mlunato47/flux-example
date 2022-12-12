@@ -24,16 +24,16 @@ celery:
       concurrency: 8
       prefetch_multiplier: 128
 # Persistent volume and network settings
-django:
-  mediaPersistentVolume:
-    enabled: true
-    name: media
-    type: pvc
-    persistentVolumeClaim: media
-  ingress:
-    enabled: true
-    activateTLS: true
-    secretName: defectdojo-tls
+# django:
+#   mediaPersistentVolume:
+#     enabled: true
+#     name: media
+#     type: pvc
+#     persistentVolumeClaim: media
+#   ingress:
+#     enabled: true
+#     activateTLS: true
+#     secretName: defectdojo-tls
 extraConfigs:
   ## Performance Config.  See: https://github.com/DefectDojo/django-DefectDojo/blob/master/docs/content/en/usage/performance.md
   ## DefectDojo offers an experimental feature to asynchronously import security reports. This feature works in most use cases, but struggles when doing things such as pushing to Jira during the import process. Because Endpoints are still being processed and created even after the import procedure is completed, pushing Findings to Jira can result in incomplete Jira tickets. It is advised to wait until after import has been completed 100%.
