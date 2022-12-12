@@ -2,7 +2,7 @@ tag: 2.17.0
 image:
   # registry: defectdojo/defectdojo
   pullPolicy: Always
-host: host.minikube.internal
+host: host.minikube.local
 # Configuration value to select database type
 database: postgresql
 mysql:
