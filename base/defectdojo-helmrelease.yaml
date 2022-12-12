@@ -1,0 +1,26 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: defectdojo
+  namespace: defectdojo
+spec:
+  releaseName: defectdojo
+  targetNamespace: defectdojo
+  chart:
+    spec:
+      chart: ./helm/defectdojo
+      sourceRef:
+        kind: GitRepository
+        name: defectdojo
+        namespace: defectdojo
+  install:
+    disableWait: true
+  upgrade:
+    disableWait: true
+  interval: 2m0s
+  dependsOn:
+    - name: defectdojo
+  valuesFrom:
+    # base values
+    - name: defectdojo-base-values
+      kind: ConfigMap

@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: defectdojo
+  namespace: defectdojo
+spec:
+  url: https://github.com/DefectDojo/django-DefectDojo
+  ref:
+    tag: 2.17.0
+  interval: 1m
