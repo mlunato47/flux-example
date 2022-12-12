@@ -18,8 +18,8 @@ spec:
   upgrade:
     disableWait: true
   interval: 2m0s
-  dependsOn:
-    - name: defectdojo
+  # dependsOn:
+  #   - name: defectdojo
   valuesFrom:
     # base values
     - name: defectdojo-base-values
