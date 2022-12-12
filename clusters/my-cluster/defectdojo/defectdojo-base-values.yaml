@@ -1,6 +1,6 @@
 tag: 2.17.0
 image:
-  registry: defectdojo/defectdojo
+  # registry: defectdojo/defectdojo
   pullPolicy: Always
 host: host.minikube.internal
 # Configuration value to select database type

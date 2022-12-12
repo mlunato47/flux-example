@@ -9,7 +9,7 @@ spec:
   ref:
     branch: main
   secretRef:
-    name: gh-credentials
+    name: flux-system
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
@@ -23,3 +23,4 @@ spec:
     kind: GitRepository
     name: cluster
     namespace: default
+  prune: true
