@@ -21,4 +21,5 @@ createPostgresqlHaPgpoolSecret: false
 django:
   ingress:
     enabled: true
-    activateTLS: false
+    activateTLS: true
+    secretName: defectdojo-tls
