@@ -1,5 +1,6 @@
 tag: 2.17.0
-host: host.minikube.local
+host: default.minikube.local
+---
 # Global settings
 # create defectdojo specific secret
 createSecret: true
@@ -15,6 +16,10 @@ createPostgresqlSecret: true
 createPostgresqlHaSecret: false
 # create postgresql-ha-pgpool secret in defectdojo chart, outside of postgresql-ha chart
 createPostgresqlHaPgpoolSecret: false
+
+
+
+
 # Configuration value to select database type
 # database: postgresql
 # mysql:
