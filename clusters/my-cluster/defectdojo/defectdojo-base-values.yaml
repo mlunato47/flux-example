@@ -16,3 +16,9 @@ createPostgresqlSecret: true
 createPostgresqlHaSecret: false
 # create postgresql-ha-pgpool secret in defectdojo chart, outside of postgresql-ha chart
 createPostgresqlHaPgpoolSecret: false
+
+# Network settings
+django:
+  ingress:
+    enabled: true
+    activateTLS: false
