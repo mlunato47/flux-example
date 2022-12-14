@@ -1,6 +1,5 @@
 tag: 2.15.1
 host: defectdojo.default.minikube.local
----
 # Global settings
 # create defectdojo specific secret
 createSecret: true
